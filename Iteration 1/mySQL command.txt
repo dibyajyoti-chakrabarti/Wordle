@@ -1,0 +1,32 @@
+create database wordle;
+
+use wordle;
+
+create table streak_number(
+streak int 
+);
+
+create table valid_words(
+words varchar (10)
+);
+
+create table word_bank(
+words varchar (10)
+);
+
+create table leaderboard(
+si_no int,
+name varchar(30),
+streak int 
+);
+
+alter table leaderboard
+alter si_no set default 0;
+
+alter table leaderboard
+alter name set default "---";
+
+alter table leaderboard
+alter streak set default 0;
+
+insert into leaderboard (si_no) values (1);
